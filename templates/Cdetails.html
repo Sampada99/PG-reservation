@@ -1,0 +1,26 @@
+{% extends "q.html" %}
+ {% load static %}
+{% block content %}
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+    <body background= "{% static 'imgs/greenwall.jpg' %}">
+    <div class= "form">
+    <form action="{% url 'Pg:Cdetails' %}" method="POST">
+      
+    {% csrf_token %}
+     <h2>Fill Out Details</h2>
+   <br>{{ form.as_p }}
+   <center>
+    <div class="input-box">
+          <input type="submit" name="" value="Sign me Up">
+        </div></a>
+</div>
+         </form>
+</body>
+</html>
+{% endblock %}

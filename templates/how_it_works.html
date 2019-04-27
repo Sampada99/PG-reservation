@@ -1,0 +1,149 @@
+{% extends "q.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+ *{
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+</style>
+</head>
+
+
+ <center><font face="broadway " size =6 color="black">How it works</font>
+
+ <p><font face=" Cooper Black" size =5 color="blue"><b>Steps For Website</b></font></p></center>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<br>
+
+<div class="row">
+ 
+     <div class="column">
+     	<div class="icon-square ">
+             <div class="col-md-6 hiw_image">
+                <img src='{% static 'imgs/register.jpg' %}' width=190 height=280  border=3 >
+              </div> 
+              <div class="column">
+                  <h3> <span class="numbers">1</span> <font face=" algerian" size =5 color="blue">Register :</font></h3>
+                    <p><font face=" lucinda sans" size =5color="black"><b>Please register and create your account</p>
+                  
+                 <div >
+                    <!--<span class="glyphicon glyphicon-arrow-right arrow-inverse"></span>-->
+                 <i class="fa fa-arrow-right arrow-inverse hiw_arrow"></i>
+                  </div>
+                     </div>
+                      </div>
+             </div>
+
+ <div class="column">
+     	<div class="icon-square ">
+             <div class="col-md-6 hiw_image">
+                <img src='{% static 'imgs/login1.jpg' %}' width=190 height=280 class="img-square " >
+              </div> 
+              <div class="column">
+                  <h3> <span class="numbers">2</span> <font face=" algerian" size =5 color="blue">Login :</font></h3>
+                    <p>Login with your given username and password</p>
+                    <p class="tagline">Login and then proceed</p>
+                 <div >
+                    <!--<span class="glyphicon glyphicon-arrow-right arrow-inverse"></span>-->
+                 <i class="fa fa-arrow-down arrow-inverse hiw_arrow"></i>
+                  </div>
+                     </div>
+                      </div>
+             </div>
+   <div class="column">
+     	<div class="icon-square ">
+             <div class="col-md-6 hiw_image">
+                <img src='{% static 'imgs/conformation.jpg' %}' width=190 height=280 class="img-square " >
+              </div> 
+              <div class="column">
+                  <h3> <span class="numbers">4</span> <font face=" algerian" size =5 color="blue">Confirmation :</font></h3>
+                    <p>Confirm your Desired Room</p>
+                    <p class="tagline"></p>
+                 <div >
+                    <!--<span class="glyphicon glyphicon-arrow-right arrow-inverse"></span>-->
+                 <i class="fa fa-arrow-down arrow-inverse hiw_arrow"></i>
+                  </div>
+                     </div>
+                      </div>
+             </div>
+
+        <div class="column">
+     	<div class="icon-square ">
+             <div class="col-md-6 hiw_image">
+                <img src='{% static 'imgs/sel3.jpg' %}'width=190 height=280  class="img-square " >
+              </div> 
+              <div class="column">
+                  <h3> <span class="numbers">3</span> <font face=" algerian" size =5 color="blue">Selection :</font></h3>
+                    <p>Select according to your preferences</p>
+                    <p class="tagline">Choose</p>
+                 <div >
+                    <!--<span class="glyphicon glyphicon-arrow-right arrow-inverse"></span>-->
+                 <i class="fa fa-arrow-left arrow-inverse hiw_arrow"></i>
+                  </div>
+                     </div>
+                      </div>
+             </div>
+
+
+         <div class="column">
+     	<div class="icon-square ">
+             <div class="col-md-6 hiw_image">
+                <img src='{% static 'imgs/payment.jpg' %}'width=190 height=280  class="img-square " >
+              </div> 
+              <div class="column">
+                  <h3> <span class="numbers">5 </span><font face=" algerian" size =5 color="blue">Payment :</font></h3>
+                    <p>Pay with your comfort method</p>
+                    <p class="tagline">Pay it</p>
+                 <div >
+                    <!--<span class="glyphicon glyphicon-arrow-right arrow-inverse"></span>-->
+                 <i class="fa fa-arrow-refresh hiw_arrow"></i>
+                  </div>
+                     </div>
+                      </div>
+             </div>
+
+    <p><br>
+      
+
+
+ 
+</body>
+</html>
+{% endblock %}

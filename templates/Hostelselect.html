@@ -1,0 +1,51 @@
+{% extends "q.html" %}
+ {% load static %}
+{% block content %}
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/select.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+   $( function() {
+    $( "#datepicker1" ).datepicker();
+  } );
+  </script>
+  </head>
+<body background= "{% static 'imgs/greenwall.jpg' %}">
+    <div class="form">
+      <form name="ss" action="{% url 'Pg:payment' %}" method="post">
+        {% csrf_token %}
+        <h2>Fix Dates</h2>
+        
+    <div class="input-box">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <label for="Check_in"> Check_in</label>
+          <input type="Check_in" name="" placeholder="MM-DD-YYYY" id="datepicker" required="">
+          
+        </div>
+        <div class="input-box">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <label for="Check_out"> Check_out</label>
+          <input type="Check_out" name="" placeholder="MM-DD-YYYY" id="datepicker1" required="">
+          <p><br>
+        </div>
+        <div class="input-box">
+         <center> <h3 style="color: grey;"><input type="submit" value="Payment">
+        </div>
+
+         </form>
+</body>
+</html>
+{% endblock %}

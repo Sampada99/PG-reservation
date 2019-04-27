@@ -1,0 +1,45 @@
+{% extends "q.html" %}
+ {% load static %}
+{% block content %}
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sign_up.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+    <body background= "{% static 'imgs/greenwall.jpg' %}">
+    <center><font face="algerian " size =6 color="black"><b></font>
+    <div class= "form">
+    <form action="{% url 'Pg:Land_register' %}" method="POST">
+      <h2>Sign Up</h2>
+    {% csrf_token %}
+       {% for field in form %}
+       <i class="fa fa-user" aria-hidden="true"></i>
+
+       <h4> {{ field.label_tag }}</h4>
+        {{ field }}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+
+    <div class="input-box">
+           <input type="submit" name="" value="Move on to Next">
+        </div></a>
+        <div class="text-center p-t-115">
+            <span class="txt1">
+              I already have an account.
+            </span>
+            <a href="{% url 'Pg:Cust_login' %}">Log In</a>
+          </div>      
+    </div>
+  </body>
+
+            
+  </html>  
+   
+{% endblock %}
+
+           

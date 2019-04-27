@@ -1,0 +1,33 @@
+{% extends "q.html" %}
+ {% load static %}
+{% block content %}
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/help.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body background= "{% static 'imgs/greenwall.jpg' %}">
+    <div class= "form">
+    <form action="{% url 'Pg:home' %}" method="POST">
+      
+    {% csrf_token %}
+     <h2><i class="fa fa-user" aria-hidden="true"></i> Help & Support</h2>
+   <br>{{ form.as_p }}
+   <div class="input-box">
+          <input type="submit" name="" value="Submit">
+        </div>
+
+      
+
+       
+
+</div>
+         </form>
+     
+         
+     
+  </body>
+  </html>
+{% endblock %}

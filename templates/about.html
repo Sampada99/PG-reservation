@@ -1,0 +1,154 @@
+{% extends "q.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #0099cc ;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ABOUT US</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 col-s-3 menu">
+  <ul>
+    <li><a href="{% url 'Pg:Ldisplay' %}"><font face="Cooper Black " size =5 color="white">Book a Room</font></a></li>
+    <li><a href="{% url 'Pg:home' %}"><font face="Cooper Black " size =5 color="white">Home</font></li>
+    <li><a href="{% url 'Pg:Cust_register' %}"><font face="Cooper Black " size =5 color="white">Sign-up</font></a></li>
+    <li><a href="{% url 'Pg:Cust_login' %}"><font face="Cooper Black " size =5 color="white">Login</font></a>.</li>
+  </ul>
+</div>
+
+<div class="col-6 col-s-9">
+  <h1>FindMe_PG</h1>
+  <p>The company is born out of an idea to provide better rental solutions to students living away from their homes. Whatever is your budget,whatever you call home,we have something for you!</p>
+  <p>
+           We are an efficient and well-managed marketplace that has access to authentic information and at the same time which is simple to comprehend and transact. 
+    </p>
+ <p>We undertake huge efforts in ensuring that the information on the website is authentic and detailed so that you as a user are empowered to make an informed decision with the least amount of fuss and strain on your pocket.
+ </p>
+ <p class="justify-test">We have done 2 things to help you find that perfect Room:
+<ul>
+<li class="justify-test">
+Firstly, we have painstakingly verified each listing and made sure that these are direct owners or shared accommodation parties and there are no middlemen or brokers. We use lot of heuristics and techniques to ensure that you get a totally broker free list.
+</li>
+<br/>
+<li class="justify-test">
+Secondly, we have also tried to ensure that maximum information is available to you in as easy to use format. This ensures that you get a very good idea of the property even before you visit it. Thus, you can select rooms sitting in the comfort of your home without actually traveling all the good and bad properties. This saves your time and effort!
+</li>
+</ul>
+</p>
+<p class="justify-test">If you are a landlord interested in posting your apartments to FindMe_PG, please email us at r.anubhuti98@gmail.com and we will get in touch to help you list the property.</p>
+<p class="justify-test">And PG Finders, happy hunting and get in touch with us to let us know how else we can help!</p>
+  <img src="{% static 'imgs/1.png' %}" width="460" height="345">
+</div>
+
+<div class="col-3 col-s-12">
+  <div class="aside">
+
+    <h2>Where?</h2>
+    <p>Find a room that suits all your needs in PCMC area.</p> 
+    <h2><a href="{% url 'Pg:how_it_works' %}">How?</a></h2>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>We help you find and book a PG room of choice across PCMC.Whatever is your budget, we have something for you.</p>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "q.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Contact Form</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/cont.css' %}">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+	<body background= "{% static 'imgs/greenwall.jpg' %}">
+		<div class="form">
+			<form>
+				<center><h2>Contact Us</h2></center>
+				<div class="input-box">
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<label for="Mobile"> <font face="Cooper Black " size =4 color="black">Mobile:9527594758</font></label>
+				</div>
+				<div class="input-box">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					<label for="mail"> <font face="Cooper Black" size =4 color="black">Email:FindMePg@gmail.com</font></label>
+					
+				</div>
+				<div class="input-box">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+					<label for="web"> <font face="Cooper Black " size =4 color="black"> Web:www.FindMePG.com </font> </label>
+				</div>
+				
+		</div>
+	</body>
+	</html>	
+{% endblock %}

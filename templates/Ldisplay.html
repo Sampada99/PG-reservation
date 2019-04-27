@@ -1,0 +1,37 @@
+{% extends "q.html" %}
+ {% load static %}
+{% block content %}
+
+<center> <font face="ALGERIAN " size =6 color="black"> THE LIST OF HOSTELS </font></center>
+<p><b> <center><font face="Cooper Black " size = 5 color="blue"> Note : This is only a view page, you have to a user in order to select these hostels</font> </p></center>
+<ul>
+	{% for landdetails in all_landd %} 
+	<li><left>
+		<table border=1 width=100%>
+			<tr align="center">
+				<th><center><font face="Cooper Black " size =5 color="black"> Hostel Picture</th>
+				<th><center> <font face="Cooper Black " size =5 color="black">Hostel Name</th>
+				<th><center><font face="Cooper Black " size =5 color="black"> Owner Name</th>
+				<th><center><font face="Cooper Black " size =5 color="black"> Address</center></th>
+				<th><center><font face="Cooper Black " size =5 color="black">Rent</th>
+			    <th><center><font face="Cooper Black " size =5 color="black">Mess</th>
+				<th><center><font face="Cooper Black " size =5 color="black">Gender</th>
+				
+			</tr>
+
+			<tr align="center">
+				<td><img src="{{landdetails.Pictures}}" width=200 height=200></td>
+				<td><font face="Arial " size =4 color="black">{{landdetails.Hostel_name}}</td>
+				<td><font face="Arial  " size =4 color="black">{{landdetails.first_name}} {{landdetails.last_name}}</td>
+				<td><font face="Arial  " size =4 color="black"> {{landdetails.Address}}</td>
+				<td><font face="Arial  " size =4 color="black">{{landdetails.Rent}}</td>
+				<td><font face="Arial  " size =4 color="black">{{landdetails.Mess}}</td>
+				<td><font face="Arial " size =4 color="black">{{landdetails.Female_or_Male}}</td>
+							</tr>
+	 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+	</li>
+	{% endfor %}
+	
+</ul>
+{% endblock %}
